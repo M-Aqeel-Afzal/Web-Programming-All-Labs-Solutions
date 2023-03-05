@@ -1,0 +1,28 @@
+
+<div style="border: solid 1px gray; padding: 15px; margin-top: 15px;">
+<p>Child1</p>
+{{data}} <br>
+first Name: {{ firstName }}
+    <br>
+    last Name: {{ lastName }}
+    <br>
+    siblings:
+    <br>
+    <ul>
+        <li *ngFor="let item of fruits">{{item}}</li>
+      </ul>
+<button (click)="clickButton()">Send massage to parent</button>
+
+<div class="sendMessages">
+  <div class="msgToSibling">
+    <label for="msgToSibling">Message to brother child2:</label>
+    <input type="text" id="msgToSibling" name="msgToSibling" [(ngModel)]= "currentMsgToSibling">
+    <button (click)="msgToSib()">send massage to Child1</button>
+  </div>
+
+<!--Receive data from other child-->
+<div class="receivedMessages">
+  <div class="msg2">
+    <p>{{ currentMsgFromChild2ToChild1 }}</p>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<div class="container">
+    <div style="border: solid 1px gray; padding: 15px; margin-top: 15px;">
+      <p>Child2</p>
+    <div class="sendMessages">
+      <div class="msgToSibling">
+        <label for="msgToSibling">Message to brother, child1:</label>
+        <button (click)="msgToSib()">Send</button>
+      </div>
+      </div>
+
+
+    <div class="receivedMessages">
+      <div class="msg1">
+       <p>{{ currentMsgFromChild1ToChild2 }}</p>
+      </div>
+    </div>
+    </div>

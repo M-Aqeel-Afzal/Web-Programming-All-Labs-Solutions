@@ -1,0 +1,17 @@
+<p>Parent</p>
+{{ valueEmittedFromChildComponent }}
+<div class="kidsrooms">
+<app-child (buttonClicked)="parrentEventHandlerFunction($event)" [data]="fruits"
+(msgToSibling)="fwdMsgToSib2($event)"
+[currentMsgFromChild2ToChild1]="currentMsgFromChild2ToChild1"
+[firstName] = "FirstName"
+[lastName] = "LastName"
+[fruits] = Siblings
+>
+
+</app-child>
+
+ <app-child2 (msgToSibling)="fwdMsgToSib1($event)"
+        [currentMsgFromChild1ToChild2]="currentMsgFromChild1ToChild2">
+ </app-child2>
+</div>
